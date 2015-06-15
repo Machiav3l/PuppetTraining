@@ -1,4 +1,4 @@
-class { "vim":
+class profile::vim { "vim":
 user => "user",
 }
 
