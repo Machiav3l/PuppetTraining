@@ -5,5 +5,7 @@ class profile::vim {
     home_dir => "/home/osboxes", 
   }
 
-  vim::plugin { "https://github.com/scrooloose/nerdtree.git": }
+  vim::plugin { 'nerdtree':
+    source => "https://github.com/scrooloose/nerdtree.git",
+  }
 } 
