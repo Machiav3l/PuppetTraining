@@ -1,3 +1,3 @@
-class role::vim {
+class role::devel {
   include profile::vim
 }
