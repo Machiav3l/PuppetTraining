@@ -5,7 +5,7 @@ class profile::vim {
   }
 
   vim::plugin { "nerdtree":
-    source => https://github.com/scrooloose/nerdtree.git",
+    source => "https://github.com/scrooloose/nerdtree.git",
   }
 }
 
