@@ -1,3 +1,5 @@
+class profile::vim (
+  $user = 'osboxes',
 ) {
   $home = $user ? {
     'root'  => '/root',
