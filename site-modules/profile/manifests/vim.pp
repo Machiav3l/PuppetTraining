@@ -38,4 +38,6 @@ class profile::vim (
   vim::plugin { 'solarized':
     source => 'https://github.com/altercation/vim-colors-solarized.git',
   }
+
+  # Puppet-lint
 }
