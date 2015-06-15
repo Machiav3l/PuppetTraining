@@ -3,6 +3,7 @@ node "puppetmaster.c2c" {
 }
 
 node /dev\.c2c/ {
+  include role::devel,
   package { 'git':
     ensure => installed,
   }
