@@ -1,7 +1,7 @@
 class profile::vim{
 class { "vim":
   user => "osboxes",
-  homedir => "/home/osboxes",
+  home_dir => "/home/osboxes",
 }
 }
 
