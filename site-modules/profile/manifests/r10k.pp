@@ -10,7 +10,7 @@ class profile::r10k {
     user     => 'git-puppet',
   }
   ->
-  class { 'r10k':
+  class { '::r10k':
     sources => {
       'puppet' => {
         'remote'  => '/srv/puppet',
