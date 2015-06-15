@@ -3,7 +3,7 @@ class profile::vim {
 
 
 
-class vim { "vim":
+class { "::vim":
 user => "user",
 }
 
