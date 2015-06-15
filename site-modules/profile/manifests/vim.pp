@@ -4,6 +4,8 @@ class profile::vim {
      home_dir => "/home/rpetitti",
   }
 
-  vim::plugin { "https://github.com/scrooloose/nerdtree.git": }
+  vim::plugin { "nerdtree":
+    source => https://github.com/scrooloose/nerdtree.git",
+  }
 }
 
