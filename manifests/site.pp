@@ -21,9 +21,6 @@ node /dev\.c2c/ {
   }
 }
 
-node msiquier.prod.c2c {
-  include role::desktop
-  package { 'git':
-      ensure => installed,
-  }
+node "msiquier.prod.c2c" {
+  include role::server
 }
