@@ -5,6 +5,6 @@ mod 'puppetlabs/inifile'
 mod 'puppetlabs/concat'
 mod 'puppetlabs/ruby'
 mod 'puppetlabs/stdlib'
-# vim
 mod 'huskycode/vim'
 mod 'maestrodev/wget'
+mod 'CraigWatson1987/vmwaretools'
