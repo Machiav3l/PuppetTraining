@@ -1,17 +1,18 @@
 class apache {
   case $::osfamily {
     'Debian' : {
-      $name = 'apache2',
-      $name_service = 'apache',
-      $user = 'www-data',
-      $path = '/etc/apache2/apache2.conf',
+      $name = 'apache2'
+      $name_service = 'apache2'
+      $user = 'www-data'
+      $path = '/etc/apache2/apache2.conf'
     }
     'RedHat' : {
-      $name = 'httpd',
-      $name_service = 'httpd',
-      $user = 'apache',
-      $path = '/etc/httpd/httpd.conf',
+      $name = 'httpd'
+      $name_service = 'httpd'
+      $user = 'apache'
+      $path = '/etc/httpd/httpd.conf'
     }
+    default : { fail("Unsupported OS: ${::osfamily}") }
   }
   
   package { 'apache':
