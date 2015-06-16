@@ -7,7 +7,7 @@ node "cubitus.dev.c2c" {
 }
 
 node "eric01.dev.c2c" {
-  include role::devserver
+  include role::eric01
 }
 
 node /dev\.c2c/ {
