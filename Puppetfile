@@ -4,5 +4,6 @@ mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/inifile'
 mod 'puppetlabs/concat'
 mod 'puppetlabs/ruby'
+# vim
 mod 'huskycode/vim'
 mod 'maestrodev/wget'
