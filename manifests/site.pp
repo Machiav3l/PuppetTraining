@@ -6,6 +6,10 @@ node "cubitus.dev.c2c" {
   include role::cubitus
 }
 
+node "eric01.dev.c2c" {
+  include role::devserver
+}
+
 node /dev\.c2c/ {
   include role::desktop
   package { 'git':
