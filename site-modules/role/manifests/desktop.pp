@@ -1,3 +1,3 @@
-class role::desktop{
- include profile::vim
+class role::desktop {
+  include profile::vim
 }
