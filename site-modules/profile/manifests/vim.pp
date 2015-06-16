@@ -12,10 +12,6 @@ class profile::vim (
   }
 
   # Syntax
-  vim::plugin { 'nerdtree':
-    source => 'https://github.com/scrooloose/nerdtree.git',
-  }
-
 
   vim::plugin { 'vim-puppet':
     source => 'https://github.com/rodjek/vim-puppet.git',
