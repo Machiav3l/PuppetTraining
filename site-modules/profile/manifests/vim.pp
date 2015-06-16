@@ -41,10 +41,7 @@ class profile::vim (
   }
 
   # Puppet-lint
-  package { 'puppet-lint':
-    ensure   => installed,
-    provider => 'gem',
-  }
+  include ::profile::puppet_lint
 
   #  vim::rc { 'syntastic':
   #    content => '
