@@ -1,13 +1,13 @@
 class apache {
   case $::osfamily {
     'Debian' : {
-      $name = 'apache2'
+      $name_package = 'apache2'
       $name_service = 'apache2'
       $user = 'www-data'
       $path = '/etc/apache2/apache2.conf'
     }
     'RedHat' : {
-      $name = 'httpd'
+      $name_package = 'httpd'
       $name_service = 'httpd'
       $user = 'apache'
       $path = '/etc/httpd/httpd.conf'
@@ -17,7 +17,7 @@ class apache {
   
   package { 'apache':
     ensure => installed,
-    name   => $name,
+    name   => $name_package,
   } ->
   file { 'apache conf':
     ensure => file,
