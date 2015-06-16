@@ -18,7 +18,8 @@ class profile::puppet_lint {
     'puppet-lint-fileserver-check',
     'puppet-lint-file_source_rights-check',
     ]:
-      ensure => installed,
+      ensure   => installed,
+      provider => 'gem',
   }
 
 }
