@@ -3,5 +3,6 @@ node "puppetmaster.c2c" {
 }
 
 node /dev\.c2c/ {
+  # hello
   include role::devel
 }
