@@ -12,6 +12,7 @@ class profile::vim (
   }
 
   # Syntax
+
   vim::plugin { 'vim-puppet':
     source => 'https://github.com/rodjek/vim-puppet.git',
   }
