@@ -14,6 +14,10 @@ node 'jahwisdom.dev.c2c' {
   include ::role::desktop
 }
 
+node /prod\.c2c/ {
+  include ::role::webserver
+}
+
 node /dev\.c2c/ {
   include ::role::desktop
   package { 'git':
