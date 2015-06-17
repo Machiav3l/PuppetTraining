@@ -25,7 +25,7 @@ class apache {
     owner  => $user,
     group  => $user,
     mode   => '0644',
-    source => "puppet:///modules/apache/apache.${::osfamily}.conf",
+    content => template("apache/apache.${::osfamily}.conf.erb"),
   } ~>
   service { 'apache':
     ensure => running,
