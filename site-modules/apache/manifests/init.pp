@@ -1,4 +1,8 @@
-class apache {
+class apache (
+  $port = '80',
+  $timeout = '60',
+  $keepalive = 'Off',
+) {
   case $::osfamily {
     'debian': {
       $package = 'apache2'
@@ -10,7 +14,8 @@ class apache {
 
     'redhat': {
       $package = 'httpd'
-      $conffile = '/etc/httpd/conf/httpd.conf'
+      $server_root = '/etc/httpd'
+      $conffile = "${server_root}/conf/httpd.conf"
       $service = 'httpd'
       $user = 'apache'
       $group = 'apache'
@@ -26,12 +31,12 @@ class apache {
     name   => $package,
   } ->
   file { 'apache conf':
-    ensure => file,
-    path   => $conffile,
-    owner  => $user,
-    group  => $group,
-    mode   => '0644',
-    source => "puppet:///modules/apache/apache.${::osfamily}.conf",
+    ensure  => file,
+    path    => $conffile,
+    owner   => $user,
+    group   => $group,
+    mode    => '0644',
+    content => template("apache/apache.${::osfamily}.conf.erb"),
   } ~>
   service { 'apache':
     ensure => running,

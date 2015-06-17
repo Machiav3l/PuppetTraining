@@ -54,7 +54,7 @@ ServerTokens OS
 #
 # Do NOT add a slash at the end of the directory path.
 #
-ServerRoot "/etc/httpd"
+ServerRoot "<%= @server_root %>"
 
 #
 # PidFile: The file in which the server should record its process
@@ -67,13 +67,13 @@ PidFile run/httpd.pid
 #
 # Timeout: The number of seconds before receives and sends time out.
 #
-Timeout 60
+Timeout <%= @timeout %>
 
 #
 # KeepAlive: Whether or not to allow persistent connections (more than
 # one request per connection). Set to "Off" to deactivate.
 #
-KeepAlive Off
+KeepAlive <%= @keepalive %>
 
 #
 # MaxKeepAliveRequests: The maximum number of requests to allow
@@ -133,7 +133,7 @@ MaxRequestsPerChild  0
 # prevent Apache from glomming onto all bound IP addresses (0.0.0.0)
 #
 #Listen 12.34.56.78:80
-Listen 80
+Listen <%= @port %>
 
 #
 # Dynamic Shared Object (DSO) Support
