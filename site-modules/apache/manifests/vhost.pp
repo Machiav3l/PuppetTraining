@@ -6,7 +6,7 @@ define apache::vhost (
 
   file { "apache vhost ${title}":
     ensure  => file,
-    path    => "/etc/httpd/conf.d/${name}",
+    path    => "${::apache::vhostdir}/${name}.conf",
     content => template('apache/vhost.conf.erb'),
     notify  => Service['apache'],
   }

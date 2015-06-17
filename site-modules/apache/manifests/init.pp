@@ -7,6 +7,7 @@ class apache (
     'debian': {
       $package = 'apache2'
       $conffile = '/etc/apache2/apache2.conf'
+      $vhostdir = '/etc/apache2/sites-enabled'
       $service = 'apache'
       $user = 'www-data'
       $group = 'www-data'
@@ -16,6 +17,7 @@ class apache (
       $package = 'httpd'
       $server_root = '/etc/httpd'
       $conffile = "${server_root}/conf/httpd.conf"
+      $vhostdir = "${server_root}/conf.d"
       $service = 'httpd'
       $user = 'apache'
       $group = 'apache'
