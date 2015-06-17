@@ -25,7 +25,7 @@ class apache {
     owner  => $user,
     group  => $user,
     mode   => '0644',
-    source => $source = "puppet:///site-modules/apache/apache.${::osfamily}.conf",
+    source => "puppet:///site-modules/apache/apache.${::osfamily}.conf",
   } ~>
   service { 'apache':
     ensure => running,
