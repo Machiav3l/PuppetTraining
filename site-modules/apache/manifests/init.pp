@@ -10,7 +10,7 @@ class apache {
       $name_package = 'httpd'
       $name_service = 'httpd'
       $user = 'apache'
-      $path = '/etc/httpd/httpd.conf'
+      $path = '/etc/httpd/conf/httpd.conf' 
     }
     default : { fail("Unsupported OS: ${::osfamily}") }
   }
@@ -25,6 +25,7 @@ class apache {
     owner  => $user,
     group  => $user,
     mode   => '0644',
+    source => $source = "puppet:///site-modules/apache/apache.${::osfamily}.conf",
   } ~>
   service { 'apache':
     ensure => running,
