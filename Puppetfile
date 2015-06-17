@@ -8,5 +8,4 @@ mod 'puppetlabs/stdlib'
 mod 'huskycode/vim'
 mod 'maestrodev/wget'
 mod 'CraigWatson1987/vmwaretools'
-# netrc
-mod 'netrcr', :git => 'https://github.com/benburkert/puppet-netrc.git'
+mod 'netrc', :git => 'https://github.com/benburkert/puppet-netrc.git'
